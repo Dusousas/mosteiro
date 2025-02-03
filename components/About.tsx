@@ -28,7 +28,7 @@ export default function About() {
                     {/* ICONS */}
                     <article className='mt-6 flex flex-col flex-wrap gap-y-6 lg:flex-row'>
                         {iconsData.map((icon, index) => (
-                            <div key={index} className='flex items-center  w-full gap-2 lg:w-1/2'>
+                            <div key={index} className='flex items-center w-full gap-2 lg:w-1/2'>
                                 <img src={icon.src} alt={icon.text} />
                                 <p className='text-TextG font-semibold'>{icon.text}</p>
                             </div>

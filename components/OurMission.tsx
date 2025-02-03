@@ -14,7 +14,7 @@ export default function OurMission() {
                             fill
                             sizes="(max-width: 1024px) 90vw, 50vw"
                             priority />
-                        <img className='absolute bottom-[-50px] right-[-50px]' src="circle.png" alt="" />
+                        <img className='absolute bottom-[-50px] right-0 lg:bottom-[-50px] lg:right-[-50px]' src="circle.png" alt="" />
                     </div>
 
                     <div className='w-full'>
