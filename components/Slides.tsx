@@ -26,7 +26,7 @@ export default function Slides() {
                     <Swiper
                         spaceBetween={50}
                         slidesPerView={1}
-                        autoplay={{ delay: 9000, disableOnInteraction: false }}
+                        autoplay={{ delay: 20000, disableOnInteraction: false }}
                         pagination={{ clickable: true }}
                         loop={true}
                         modules={[Autoplay, Pagination, Navigation]}
@@ -36,6 +36,8 @@ export default function Slides() {
                         <SwiperSlide><Slide2 /></SwiperSlide>
                         <SwiperSlide><Slide3 /></SwiperSlide>
                     </Swiper>
+                
+
                 </div>
             </div>
         </section>

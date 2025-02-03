@@ -1,12 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 export default function Slide1() {
     return (
         <>
             <section className='flex bg-slate-100 py-10 px-4 flex-col mt-20 lg:border-l-[1px] lg:border-OrangeP lg:flex-row'>
 
-                <div className=' lg:w-[50%] px-10'>
+                <div className='lg:w-[50%] lg:px-10'>
                     <div className='flex items-center justify-center gap-1 lg:justify-start'>
                         <img src="icon-sub.svg" alt="" />
                         <h2 className='text-center lg:text-left'>Almoço no mosteiro</h2>
