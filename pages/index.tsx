@@ -3,7 +3,7 @@ import Main from "@/components/Main";
 import About from "@/components/About";
 import Missa from "@/components/Missa";
 import OurMission from "@/components/OurMission";
-import Services from "@/components/Services";
+import Slides from "@/components/Slides";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +22,7 @@ export default function Home() {
       <About />
       <Missa />
       <OurMission />
-      <Services />
+      <Slides />
     </>
   );
 }
