@@ -18,7 +18,7 @@ export default function Missa() {
             <div className="relative w-full max-w-[600px] h-[500px] lg:h-[722px]">
               <Image
                 className="rounded-br-[20%] object-cover"
-                src="/about1.jpg"
+                src="/mainmissa.jpg"
                 alt="Imagem da missa"
                 fill
                 sizes="(max-width: 1024px) 90vw, 50vw"
