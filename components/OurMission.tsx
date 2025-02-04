@@ -10,7 +10,7 @@ export default function OurMission() {
 
 
                     <div className="relative w-full max-w-[600px] h-[500px] lg:h-[722px] ">
-                        <Image className="rounded-bl-[100px] object-cover relative" src="/missao.jpg" alt="Imagem da missa"
+                        <Image className="rounded-bl-[100px] object-cover relative" src="/missao.JPG" alt="Imagem da missa"
                             fill
                             sizes="(max-width: 1024px) 90vw, 50vw"
                             priority />
