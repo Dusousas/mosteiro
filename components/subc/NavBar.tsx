@@ -5,6 +5,10 @@ import { useRouter } from 'next/router';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeLink, setActiveLink] = useState<string>('');
+    const router = useRouter();
+
+    // Verifica se o usuário está na página /Calendario
+    const isActivePage = (path: string) => router.pathname === path;
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
@@ -23,9 +27,28 @@ export default function Navbar() {
         };
     }, []);
 
-    // Função para aplicar a classe de cor ativa
+    // Define a classe ativa para os links do menu
     const isActive = (section: string) => {
-        return activeLink === section ? 'text-OrangeP' : 'text-BlueP';
+        return activeLink === section && !isActivePage('/Calendario') ? 'text-OrangeP' : 'text-BlueP';
+    };
+
+    // Função para rolar até a seção correta ou mudar de página
+    const handleNavigation = (section: string, path: string = "/") => {
+        if (router.pathname === path) {
+            const element = document.getElementById(section);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            router.push(path).then(() => {
+                setTimeout(() => {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 500);
+            });
+        }
     };
 
     return (
@@ -33,29 +56,29 @@ export default function Navbar() {
             {/* Navbar Desktop */}
             <nav className="hidden lg:block">
                 <ul className="flex gap-6 text-lg uppercase tracking-wider">
-                    <a href="#home">
-                        <li className={isActive('home')}>Início</li>
-                    </a>
-                    <a href="#about">
-                        <li className={isActive('about')}>Sobre</li>
-                    </a>
-                    <a href="#missas">
-                        <li className={isActive('missas')}>Missas</li>
-                    </a>
-                    <a href="#tradicao">
-                        <li className={isActive('tradicao')}>Tradições</li>
-                    </a>
-                    <a href="#contato">
-                        <li className={isActive('contato')}>Contato</li>
-                    </a>
+                    <li className={`cursor-pointer ${isActive('home')}`} onClick={() => handleNavigation('home')}>
+                        Início
+                    </li>
+                    <li className={`cursor-pointer ${isActive('about')}`} onClick={() => handleNavigation('about')}>
+                        Sobre
+                    </li>
+                    <li className={`cursor-pointer ${isActive('missas')}`} onClick={() => handleNavigation('missas')}>
+                        Missas
+                    </li>
+                    <li className={`cursor-pointer ${isActive('tradicao')}`} onClick={() => handleNavigation('tradicao')}>
+                        Tradições
+                    </li>
+                    <li className={`cursor-pointer ${isActivePage('/Calendario') ? 'text-OrangeP' : 'text-BlueP'}`} onClick={() => router.push('/Calendario')}>
+                        Eventos
+                    </li>
                 </ul>
             </nav>
 
             {/* Navbar Mobile */}
             <div className="lg:hidden">
                 {/* Botão do menu */}
-                <button 
-                    onClick={() => setIsOpen(!isOpen)} 
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
                     className="text-3xl text-BlueP focus:outline-none"
                 >
                     {isOpen ? <FiX /> : <FiMenu />}
@@ -64,21 +87,21 @@ export default function Navbar() {
                 {/* Menu Mobile */}
                 <nav className={`${isOpen ? "block" : "hidden"} absolute left-0 top-[96px] w-full bg-white shadow-md z-50 py-8 text-OrangeP`}>
                     <ul className="flex flex-col items-center gap-8 py-8 text-lg uppercase tracking-wider">
-                        <a href="#home">
-                            <li className={isActive('home')}>Início</li>
-                        </a>
-                        <a href="#about">
-                            <li className={isActive('about')}>Sobre</li>
-                        </a>
-                        <a href="#missas">
-                            <li className={isActive('missas')}>Missas</li>
-                        </a>
-                        <a href="#tradicao">
-                            <li className={isActive('tradicao')}>Tradições</li>
-                        </a>
-                        <a href="#contato">
-                            <li className={isActive('contato')}>Contato</li>
-                        </a>
+                        <li className={`cursor-pointer ${isActive('home')}`} onClick={() => handleNavigation('home')}>
+                            Início
+                        </li>
+                        <li className={`cursor-pointer ${isActive('about')}`} onClick={() => handleNavigation('about')}>
+                            Sobre
+                        </li>
+                        <li className={`cursor-pointer ${isActive('missas')}`} onClick={() => handleNavigation('missas')}>
+                            Missas
+                        </li>
+                        <li className={`cursor-pointer ${isActive('tradicao')}`} onClick={() => handleNavigation('tradicao')}>
+                            Tradições
+                        </li>
+                        <li className={`cursor-pointer ${isActivePage('/Calendario') ? 'text-OrangeP' : 'text-BlueP'}`} onClick={() => router.push('/Calendario')}>
+                            Eventos
+                        </li>
                     </ul>
                 </nav>
             </div>
