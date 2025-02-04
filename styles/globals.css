@@ -8,6 +8,10 @@ body {
   color: white;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .maxW{
   max-width: 1560px;
   margin: 0 auto;

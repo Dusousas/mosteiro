@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function OurMission() {
     return (
         <>
-            <section className='py-20'>
+            <section id='missas' className='py-20'>
                 <div className='maxW flex flex-col gap-20 items-center lg:flex-row'>
 
 

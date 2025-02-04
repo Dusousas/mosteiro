@@ -11,7 +11,7 @@ import Slide3 from "./subc/Slide3";
 
 export default function Slides() {
     return (
-        <section className="py-20">
+        <section id="tradicao" className="py-10">
             <div className="text-black maxW">
                 <div className="flex w-full items-center justify-center gap-1">
                     <Image src="/icon-sub.svg" alt="Ícone Missa" width={20} height={20} priority />

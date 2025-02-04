@@ -9,7 +9,7 @@ const iconsData = [
 
 export default function About() {
     return (
-        <section className='py-20'>
+        <section id='about' className='py-20'>
             <div className='maxW flex flex-col-reverse lg:flex-row'>
                 <article className='flex flex-col items-center gap-4 lg:flex-row lg:w-1/2 relative'>
                     <img className='rounded-br-[20%] lg:max-w-[60%] lg:h-[600px] lg:mt-32 lg:object-cover' src="about1.jpg" alt="" />

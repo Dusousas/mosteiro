@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Main() {
     return (
-        <section className="relative h-screen w-full flex items-center justify-center">
+        <section id='home' className="relative h-screen w-full flex items-center justify-center">
             {/* Imagem otimizada como background */}
             <div className="absolute inset-0 w-full h-full">
                 <Image

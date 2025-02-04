@@ -5,7 +5,7 @@ import Numbers from './subc/Numbers';
 export default function Missa() {
   return (
     <>
-      <section className="pt-10">
+      <section id='missas' className="pt-10">
         <div className="maxW">
           <div className="flex w-full items-center justify-center gap-1">
             <Image src="/icon-sub.svg" alt="Ícone Missa" width={20} height={20} priority />
