@@ -31,7 +31,7 @@ export default function Missa() {
               {['missa1.jpg', 'missa2.jpg', 'about1.jpg'].map((img, index) => (
                 <div key={index} className="relative w-[450px] h-[230px]">
                   <Image
-                    className="rounded-br-[100px] object-cover object-center"
+                    className="rounded-br-[100px] object-cover"
                     src={`/${img}`}
                     alt={`Imagem ${index + 1}`}
                     fill
