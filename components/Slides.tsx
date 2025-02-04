@@ -24,7 +24,7 @@ export default function Slides() {
                 {/* SLIDER */}
                 <div className="">
                     <Swiper
-                        spaceBetween={50}
+                        spaceBetween={0}
                         slidesPerView={1}
                         autoplay={{ delay: 20000, disableOnInteraction: false }}
                         pagination={{ clickable: true }}
