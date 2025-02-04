@@ -30,7 +30,7 @@ export default function Calendario() {
                                 Eventos de <span className='text-OrangeP'>{mes}</span>
                             </h1>
 
-                            <article className='flex gap-6 flex-wrap border-b py-10'>
+                            <article className='flex gap-6 flex-wrap border-b py-10 justify-center lg:justify-start'>
                                 {eventosDoMes.map((evento, index) => (
                                     <div key={index} className='border w-[380px] max-w-[380px]'>
                                         <h2 className='bg-OrangeP text-white text-center font-normal py-2'>{evento.titulo}</h2>
