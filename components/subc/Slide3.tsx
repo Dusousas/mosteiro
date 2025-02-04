@@ -18,7 +18,7 @@ export default function Slide1() {
                     </div>
                 </div>
 
-                <img className='rounded-bl-[100px] mt-4 lg:w-[50%] lg:mt-0' src="/slidealmoco.jpg" alt="" />
+                <img className='rounded-bl-[100px] mt-4 lg:w-[50%] lg:mt-0 max-w-[647px] max-h-[578px]' src="/slidecafe.jpg" alt="" />
 
             </section>
         </>
