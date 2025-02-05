@@ -22,13 +22,13 @@ export default function Main() {
             <div className="maxW relative z-10 w-full h-full flex flex-col items-center justify-center gap-6 text-white">
                 <div className="flex items-center gap-1">
                     <Image src="icon-sub.svg" alt="Ícone" width={20} height={20} />
-                    <h2 className="text-center">faça a diferença hoje</h2>
+                    <h2 className="text-center">Laudato Si mi Signori</h2>
                 </div>
                 <h1 className="text-5xl uppercase text-center font-semibold lg:leading-[90px] lg:text-[80px]">
                     Felizes são os que ouvem a palavra de Deus e a guardam!
                 </h1>
                 <p className="text-center lg:max-w-[50%]">
-                    Experimente o amor e a graça de Deus em uma comunidade acolhedora, onde a fé cresce, a esperança floresce e cada pessoa é valorizada.
+                Louvado sejas, meu Senhor, pela nossa irmã, a mãe terra, que nos sustenta e governa e produz variados frutos com flores coloridas e verduras.
                 </p>
 
                 <div className="mt-6">

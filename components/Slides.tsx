@@ -11,7 +11,7 @@ import Slide3 from "./subc/Slide3";
 
 export default function Slides() {
     return (
-        <section id="tradicao" className="py-10">
+        <section id="tradicao" className="py-10 bg-BegeP">
             <div className="text-black maxW">
                 <div className="flex w-full items-center justify-center gap-1">
                     <Image src="/icon-sub.svg" alt="Ícone Missa" width={20} height={20} priority />
@@ -24,12 +24,12 @@ export default function Slides() {
                 {/* SLIDER */}
                 <div className="">
                     <Swiper
-                        spaceBetween={0}
+                        spaceBetween={10}
                         slidesPerView={1}
                         autoplay={{ delay: 20000, disableOnInteraction: false }}
                         pagination={{ clickable: true }}
                         loop={true}
-                        modules={[Autoplay, Pagination, Navigation]}
+                        modules={[Autoplay, Pagination]}
                         className="w-full"
                     >
                         <SwiperSlide><Slide1 /></SwiperSlide>

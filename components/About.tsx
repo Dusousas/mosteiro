@@ -22,8 +22,10 @@ export default function About() {
                         <h2 className='text-center lg:text-left'>Sobre nós</h2>
                     </div>
                     <h1 className='text-4xl text-black text-center lg:text-left font-bold uppercase lg:max-w-[70%] mt-6'>Fé, esperança e amor em ação <span className='text-OrangeP'>todos os dias</span></h1>
-                    <p className='text-TextG mt-6'>Somos uma comunidade vibrante de fiéis, dedicados à adoração, ao companheirismo e ao serviço. Nossa missão é compartilhar o amor de Deus, crescer na fé e causar um impacto positivo no mundo por meio da compaixão e de conexões significativas.</p>
-                    <p className='text-TextG mt-6'>Somos uma comunidade vibrante de fiéis, dedicados à adoração, ao companheirismo e ao serviço. Nossa missão é compartilhar o amor de Deus, crescer na fé e causar um impacto positivo no mundo por meio da compaixão e de conexões significativas.</p>
+                    <p className='text-TextG mt-6'>A partir da década de 50, o Sr. Aldo Surian será o novo proprietário da Fazenda São José do Paraíso, onde será construída uma bela torre anexada à capela.</p>
+                    <p className='text-TextG mt-2'>Nos anos 70, com novo proprietário, Sr. Guerino Supertti, a fazenda passará a se chamar Fazenda São Sebastião do Paraíso. Após seu falecimento, em 1997, a propriedade ficará sob posse de seus herdeiros.</p>
+                    <p className='text-TextG mt-2'>A Fazenda São José do Paraíso, continuando a ser dividida entre os herdeiros e vendida a novos proprietários, tornou-se uma região de pequenos sitiantes dedicados à lavoura de café.No final dos anos 80, em 1989, a fazenda será adquirida de D. Leontina Russo e recebida em doação para a instalação do Mosteiro do Paraíso, tendo a Capela de São José como sede do mosteiro. Era o final dos anos 80, um período marcado por uma visão eclesial favorável ao florescimento de novas comunidades.</p>
+                    <p className='text-TextG mt-2'>Em 1996, com a aprovação diocesana, o Pe. Nilton muda-se da Paróquia de Torrinha para a Capela do Paraíso. Logo depois, chegam os primeiros vocacionados.</p>
 
                     {/* ICONS */}
                     <article className='mt-6 flex flex-col flex-wrap gap-y-6 lg:flex-row'>

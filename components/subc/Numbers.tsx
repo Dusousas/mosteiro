@@ -3,7 +3,7 @@ import React from 'react';
 export default function Numbers() {
     return (
         <>
-            <section className='mt-20'>
+            <section className='mt-20 pb-10'>
                 <div className='bg-OrangeP rounded-br-[100px] py-14 flex flex-col gap-y-6 lg:flex-row'>
 
                     <article className='flex flex-col justify-center items-center px-8'>
