@@ -5,6 +5,8 @@ import Missa from "@/components/Missa";
 import OurMission from "@/components/OurMission";
 import Slides from "@/components/Slides";
 import Calander from "@/components/Calander";
+import Contact from "@/components/Contact";
+import Capela from "@/components/Capela";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +26,9 @@ export default function Home() {
       <Missa />
       <OurMission />
       <Slides />
-      <Calander />
+      {/* <Calander /> */}
+      <Capela />
+      <Contact />
     </>
   );
 }

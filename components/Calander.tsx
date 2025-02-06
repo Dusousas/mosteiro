@@ -16,6 +16,7 @@ export default function Calander() {
                     </h1>
 
                     <article className='flex gap-6 flex-wrap py-10 justify-center lg:justify-start'>
+                        {/* EVENTOS SINGLE */}
                         <div className='border w-[380px] max-w-[380px]'>
                             <h2 className='bg-OrangeP text-white text-center font-normal py-2'>Almoço do Mosteiro</h2>
                             <p className='text-black text-center py-4 text-2xl border-b'>12/01/20025</p>
