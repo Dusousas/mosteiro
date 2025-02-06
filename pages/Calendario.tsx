@@ -1,4 +1,3 @@
-import Main from '@/components/Main';
 import MainCale from '@/components/MainCale';
 import React from 'react';
 
