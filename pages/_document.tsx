@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="pt-BR">
       <Head>
         {/* Meta Tags Essenciais */}
+        <title>Agromonges - Mosteiro do paraíso</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Agromonges - Mosteiro do paraíso" />

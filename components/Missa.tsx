@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Missa() {
-
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const galleryImages = [
     "galeria/Galeria1.webp",
@@ -16,10 +16,32 @@ export default function Missa() {
     "galeria/Galeria7.webp"
   ];
 
+  // Verificar se a tela é grande (lg) apenas no cliente
+  useEffect(() => {
+    const checkScreenSize = () => {
+      // Tailwind lg breakpoint é 1024px
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    // Verificar no carregamento inicial
+    checkScreenSize();
+
+    // Adicionar listener para redimensionamento
+    window.addEventListener('resize', checkScreenSize);
+
+    // Limpar listener ao desmontar
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   const openLightbox = (index: React.SetStateAction<number>) => {
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
+    // Só abrir o lightbox se estiver em uma tela grande
+    if (isLargeScreen) {
+      setCurrentImageIndex(index);
+      setLightboxOpen(true);
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const closeLightbox = () => {
@@ -86,38 +108,41 @@ export default function Missa() {
             <p className='text-TextG mt-6 text-center lg:max-w-[80%] lg:mx-auto'>A "Missa do Cio da Terra", celebrada por ocasião da Solenidade de Jesus Cristo, Rei do Unierso, final do Ano Litúrgico, é uma das espressões de louvor celebrada pela comunidade rural com a participação de fiéis de muitos lugares da região.</p>
 
             <div className="mt-20">
+              {/* Grid para mobile - sem evento de clique */}
               <div className="grid grid-cols-1 gap-4 md:hidden">
                 {galleryImages.map((img, index) => (
-                  <div key={index} className="aspect-square w-full cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(index)}>
+                  <div key={index} className="aspect-square w-full relative">
                     <Image className="rounded-lg object-cover" src={`/${img}`} alt={`Imagem ${index + 1} da galeria`} fill sizes="(max-width: 768px) 100vw, 50vw" quality={80} />
                   </div>
                 ))}
               </div>
 
+              {/* Grid para tablet - sem evento de clique */}
               <div className="hidden md:grid lg:hidden grid-cols-2 gap-4">
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(0)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[0]}`} alt="Imagem 1 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(1)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[1]}`} alt="Imagem 2 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(2)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[2]}`} alt="Imagem 3 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(3)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[3]}`} alt="Imagem 4 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
-                <div className="col-span-2 aspect-video cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(4)}>
+                <div className="col-span-2 aspect-video relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[4]}`} alt="Imagem 5 da galeria" fill sizes="(max-width: 1024px) 100vw, 66vw" quality={80} />
                 </div>
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(5)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[5]}`} alt="Imagem 6 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
-                <div className="aspect-square cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(6)}>
+                <div className="aspect-square relative">
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[6]}`} alt="Imagem 7 da galeria" fill sizes="(max-width: 1024px) 50vw, 33vw" quality={80} />
                 </div>
               </div>
 
+              {/* Grid para desktop - com eventos de clique */}
               <div className="hidden lg:grid grid-cols-5 grid-rows-5 gap-4 h-[800px]">
                 <div className="col-span-2 row-span-2 cursor-pointer hover:opacity-90 transition-opacity relative" onClick={() => openLightbox(0)}>
                   <Image className="rounded-lg object-cover" src={`/${galleryImages[0]}`} alt="Imagem 1 da galeria" fill sizes="40vw" quality={80} />
@@ -146,7 +171,7 @@ export default function Missa() {
         </div>
       </section>
 
-      {lightboxOpen && (
+      {lightboxOpen && isLargeScreen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
           <div className="relative w-full h-full flex items-center justify-center">
             <button onClick={closeLightbox} className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-10" aria-label="Fechar visualizador">&times;</button>
