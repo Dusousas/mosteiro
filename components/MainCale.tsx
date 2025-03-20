@@ -25,7 +25,7 @@ export default function MainCale() {
                     <h2 className="text-center">Eventos</h2>
                 </div>
                 <h1 className="text-5xl uppercase text-center font-semibold lg:leading-[90px] lg:text-[80px]">
-                    Confira nossos evetos
+                    Confira nossos eventos
                 </h1>
 
             </div>

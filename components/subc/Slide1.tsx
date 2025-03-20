@@ -14,7 +14,7 @@ export default function Slide1() {
                     <p className='text-TextG text-center mt-6 lg:text-left'>Junte-se a nós para momentos de comunhão e sabor! Todo mês, preparamos um almoço especial, unindo tradição, aconchego e uma culinária irresistível. Venha viver essa experiência única e compartilhar bons momentos em um ambiente acolhedor.</p>
                     <p className='text-TextG text-center mt-2 lg:text-left'>Além de saborear pratos preparados com carinho e ingredientes selecionados, nossos almoços mensais são uma oportunidade para fortalecer laços, celebrar a fé e desfrutar da serenidade do mosteiro. Uma experiência que une tradição, hospitalidade e bons momentos em família.</p>
                     <div className='flex justify-center mt-6 lg:justify-start'>
-                        <a className='bg-OrangeP px-6 py-4 rounded-r-full uppercase text-white' href="">Consultar datas</a>
+                        <a className='bg-OrangeP px-6 py-4 rounded-r-full uppercase text-white' target='_blank' href="https://wa.me/5514998306263?text=Gostaria%20de%20saber%20mais%20sobre%20o%20almoço%20no%20mosteiro.">Consultar datas</a>
                     </div>
                 </div>
 

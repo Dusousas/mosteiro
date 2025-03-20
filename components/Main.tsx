@@ -4,21 +4,19 @@ import React from 'react';
 export default function Main() {
     return (
         <section id='home' className="relative h-screen w-full flex items-center justify-center">
-            {/* Imagem otimizada como background */}
             <div className="absolute inset-0 w-full h-full">
                 <Image
-                    src="/mainBG1.jpg"
+                    src="/mainBG1.webp"
                     alt="Imagem de fundo"
                     fill
                     className="object-cover"
                     priority
-                    quality={80} // Reduz o peso da imagem sem perder muita qualidade
+                    quality={80}
                     sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-black/60" />
             </div>
 
-            {/* Conteúdo acima da imagem */}
             <div className="maxW relative z-10 w-full h-full flex flex-col items-center justify-center gap-6 text-white">
                 <div className="flex items-center gap-1">
                     <Image src="icon-sub.svg" alt="Ícone" width={20} height={20} />
@@ -28,11 +26,11 @@ export default function Main() {
                     Felizes são os que ouvem a palavra de Deus e a guardam!
                 </h1>
                 <p className="text-center lg:max-w-[50%]">
-                Louvado sejas, meu Senhor, pela nossa irmã, a mãe terra, que nos sustenta e governa e produz variados frutos com flores coloridas e verduras.
+                    Louvado sejas, meu Senhor, pela nossa irmã, a mãe terra, que nos sustenta e governa e produz variados frutos com flores coloridas e verduras.
                 </p>
 
                 <div className="mt-6">
-                    <a className="bg-OrangeP px-6 py-4 rounded-full uppercase" href="">
+                    <a className="bg-OrangeP px-6 py-4 rounded-full uppercase" target='_blank' href="https://wa.me/5514998306263?text=Tenho%20interesse%20em%20fazer%20uma%20doação%20e%20gostaria%20de%20mais%20informações.">
                         Fazer Doação
                     </a>
                 </div>

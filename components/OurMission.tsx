@@ -14,7 +14,6 @@ export default function OurMission() {
                             fill
                             sizes="(max-width: 1024px) 90vw, 50vw"
                             priority />
-                        {/* Efeito 360 */}
                         <img className='absolute bottom-[-50px] right-0 lg:bottom-[-50px] lg:right-[-50px] spinner' src="circle.png" alt="" />
                     </div>
 
@@ -27,7 +26,7 @@ export default function OurMission() {
                         <p className='text-black text-center font-semibold mt-6 lg:text-left'>Nossa missão é compartilhar o amor de Deus, promover o crescimento espiritual e servir nossa comunidade com compaixão e propósito.</p>
                         <p className='text-TextG text-center mt-6 lg:text-left'>Nossa missão é compartilhar o amor e a graça de Deus, promovendo o crescimento espiritual, servindo nossa comunidade com compaixão e construindo relacionamentos significativos. Estamos dedicados a viver nossa fé por meio da adoração, evangelismo e serviço impactante.</p>
                         <div className='flex justify-center mt-14 lg:justify-start'>
-                            <a className='bg-OrangeP px-6 py-4 rounded-full uppercase' href="">Entre em contato agora</a>
+                            <a target='_blank' className='bg-OrangeP px-6 py-4 rounded-full uppercase' href="https://wa.me/5514998306263?text=Estou%20entrando%20em%20contato%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20mosteiro.">Entre em contato agora</a>
                         </div>
                     </div>
 
