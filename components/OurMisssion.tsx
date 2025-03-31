@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-
 
 export default function OurMission() {
     return (
@@ -10,7 +8,7 @@ export default function OurMission() {
 
 
                     <div className="relative w-full max-w-[600px] h-[500px] lg:h-[722px] ">
-                        <img className="rounded-bl-[100px] w-full h-full" src="/missao.JPG" alt="Imagem da missa"/>
+                        <img className="rounded-bl-[100px] w-full h-full" src="/missao.jpg" alt="Imagem da missa"/>
                         <img className='absolute bottom-[-50px] right-0 lg:bottom-[-50px] lg:right-[-50px] spinner' src="circle.png" alt="" />
                     </div>
 
