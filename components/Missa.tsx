@@ -14,25 +14,25 @@ export default function Missa() {
 
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-10 ">
                         <div className="md:col-span-2 md:row-span-2 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria1.webp' alt="Imagem 1 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria1.webp' alt="Imagem 1 da galeria" />
                         </div>
                         <div className="md:row-span-3 md:col-start-3 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria2.webp' alt="Imagem 2 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria2.webp' alt="Imagem 2 da galeria" />
                         </div>
                         <div className="md:row-span-2 md:col-start-4 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria3.webp' alt="Imagem 3 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria3.webp' alt="Imagem 3 da galeria" />
                         </div>
                         <div className="md:row-span-5 md:col-start-5 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria4.webp' alt="Imagem 4 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria4.webp' alt="Imagem 4 da galeria" />
                         </div>
                         <div className="md:col-start-4 md:row-start-3 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria5.webp' alt="Imagem 5 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria5.webp' alt="Imagem 5 da galeria" />
                         </div>
                         <div className="md:col-span-2 md:row-span-2 md:col-start-3 md:row-start-4 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria6.webp' alt="Imagem 6 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria6.webp' alt="Imagem 6 da galeria" />
                         </div>
                         <div className="md:col-span-2 md:row-span-3 md:col-start-1 md:row-start-3 cursor-pointer hover:opacity-90 transition-opacity">
-                            <img className="rounded-lg object-cover w-full h-full" src='galeria/galeria7.webp' alt="Imagem 7 da galeria" />
+                            <img className="rounded-lg object-cover w-full h-full" src='/galeria/galeria7.webp' alt="Imagem 7 da galeria" />
                         </div>
                     </div>
                 </div>
